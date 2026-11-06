@@ -1,0 +1,171 @@
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* Sidebar */
+
+.sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  color: white;
+  background: #172554;
+}
+
+.desktop-drawer .MuiDrawer-paper,
+.mobile-drawer .MuiDrawer-paper {
+  border: none;
+  background: #172554;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar-brand .MuiTypography-caption {
+  color: #bfdbfe;
+}
+
+.sidebar-label {
+  padding: 10px;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+.sidebar-link {
+  margin: 5px 0;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  color: #cbd5e1 !important;
+}
+
+.sidebar-link:hover {
+  background: #1e3a8a !important;
+}
+
+.sidebar-link.active {
+  color: white !important;
+  background: #2563eb !important;
+}
+
+.sidebar-icon {
+  min-width: 40px !important;
+  color: inherit !important;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
+  padding: 15px 10px;
+  color: #94a3b8;
+}
+
+/* Main Content */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Header */
+
+.top-header {
+  background: white !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-toolbar {
+  min-height: 75px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header-avatar {
+  background: #2563eb !important;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+/* Page Content */
+
+.page-content {
+  padding: 30px;
+  min-height: calc(100vh - 75px);
+}
+
+/* Responsive */
+
+.mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktop-drawer {
+    display: none;
+  }
+
+  .mobile-drawer {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex !important;
+  }
+
+  .page-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-info {
+    display: none;
+  }
+
+  .header-toolbar {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .page-content {
+    padding: 15px;
+  }
+}
