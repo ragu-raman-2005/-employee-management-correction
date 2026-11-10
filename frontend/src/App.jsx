@@ -1,6 +1,6 @@
 
 import { Navigate, Route, Routes } from "react-router-dom";
-
+import EmployeeOnboarding from "./pages/EmployeeOnboarding";
 import { useAuth } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import MainLayout from "./layouts/MainLayout";
@@ -38,6 +38,8 @@ export default function App() {
           <Route path="/employees" element={<Employees />} />
           <Route path="/departments" element={<Departments />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/onboarding" element={<EmployeeOnboarding />}
+/>
         </Route>
       </Route>
 

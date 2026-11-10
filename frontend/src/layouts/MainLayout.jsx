@@ -27,7 +27,8 @@ import {
   Person,
   Logout,
   GroupsRounded,
-  NotificationsNone
+  NotificationsNone,
+  PersonAdd
 } from "@mui/icons-material";
 
 import { useAuth } from "../context/AuthContext";
@@ -46,6 +47,11 @@ const menuItems = [
     title: "Employees",
     path: "/employees",
     icon: <People />
+  },
+  {
+    title: "Employee Onboarding",
+    path: "/onboarding",
+    icon: <PersonAdd />
   },
   {
     title: "Departments",
@@ -87,6 +93,8 @@ export default function MainLayout() {
   const drawerContent = (
     <Box className="sidebar-content">
 
+      {/* Sidebar Brand */}
+
       <Box className="sidebar-brand">
         <GroupsRounded sx={{ fontSize: 38 }} />
 
@@ -107,6 +115,8 @@ export default function MainLayout() {
         MAIN MENU
       </Typography>
 
+      {/* Sidebar Menu Items */}
+
       <List>
         {menuItems.map((item) => (
           <ListItemButton
@@ -125,6 +135,8 @@ export default function MainLayout() {
           </ListItemButton>
         ))}
       </List>
+
+      {/* Sidebar Footer */}
 
       <Box className="sidebar-footer">
         <Typography variant="caption">
@@ -204,7 +216,10 @@ export default function MainLayout() {
                 Employee Management
               </Typography>
 
-              <Typography variant="caption" color="text.secondary">
+              <Typography
+                variant="caption"
+                color="text.secondary"
+              >
                 Manage your organization
               </Typography>
             </Box>
@@ -214,6 +229,8 @@ export default function MainLayout() {
               <IconButton>
                 <NotificationsNone />
               </IconButton>
+
+              {/* User Profile */}
 
               <Box
                 className="profile-button"
@@ -228,11 +245,16 @@ export default function MainLayout() {
                     {user?.name || "User"}
                   </Typography>
 
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                  >
                     {user?.role || "EMPLOYEE"}
                   </Typography>
                 </Box>
               </Box>
+
+              {/* Profile Menu */}
 
               <Menu
                 anchorEl={anchorEl}
